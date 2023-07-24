@@ -1,0 +1,168 @@
+/* Start Global Rules  */
+body {
+  font-family: "Pacifico", cursive;
+  font-family: "PT Sans Caption", sans-serif;
+  font-family: "Righteous", cursive;
+
+  background-color: #f7ecde;
+}
+
+::selection:not(h2) {
+  background-color: #fec260;
+  color: #000;
+}
+/* End Global Rules  */
+
+/* Start Header  */
+header {
+  border-bottom: 2px dotted;
+}
+
+header .main-title {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+header .main-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 15px;
+  background-color: #fec260;
+  width: 100%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+header .main-title:hover:after {
+  height: 40px;
+}
+
+/* End Header  */
+
+/* Start Content  */
+.content {
+  border-bottom: 2px dotted;
+}
+.content > h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form {
+  font-family: "PT Sans Caption", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  color: #333 !important;
+}
+
+form button {
+  background-color: #d1512d !important;
+  align-self: center;
+}
+form button:hover {
+  background-color: #bb4120 !important;
+}
+
+table {
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+table tbody tr {
+  line-height: 37.6px;
+}
+
+/* End Content  */
+
+/* Start Model  */
+
+.model {
+  box-shadow: 0 0 0 10000px #00000091;
+  width: 500px;
+  font-weight: 300;
+  font-family: "PT Sans Caption", sans-serif;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .model {
+    width: 380px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .model {
+    width: 450px;
+  }
+}
+
+.model .header span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.model .header span:nth-child(1) {
+  background-color: #f15f5d;
+}
+.model .header span:nth-child(2) {
+  background-color: #febe2e;
+}
+.model .header span:nth-child(3) {
+  background-color: #4db748;
+}
+
+.model .modelContentForValidation p {
+  margin-bottom: 5px;
+}
+
+.model .modelContentForValidation p i {
+  color: #f15f5d;
+  font-size: 18px;
+}
+
+.model .modelCotentForSameName h4 i {
+  color: #f15f5d;
+  font-size: 22px;
+}
+
+#closebtn {
+  cursor: pointer;
+  transition: 0.2s;
+
+  width: 30px;
+  height: 30px;
+  background: #3f51b5;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 17px !important;
+}
+#closebtn:hover {
+  color: #ccc;
+}
+
+/* model overlay  */
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #00000047;
+  top: 0;
+  left: 0;
+}
+
+/* End Model  */

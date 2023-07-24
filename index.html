@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="text-center py-5">
+        <h1 class="main-title pt-2 mb-3">Bookmarker</h1>
+      </header>
+      <div class="content p-3 pb-0">
+        <h2 class="text-center py-2 pb-4">
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+
+        <form class="pb-3">
+          <label for="siteName" class="mb-2">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            Site Name</label
+          >
+          <input
+            autocomplete="off"
+            id="websiteNameInput"
+            type="text"
+            class="form-control mb-4"
+            placeholder="Bookmark Name"
+          />
+          <label for="siteName" class="mb-2">
+            <i class="fa-solid fa-link pe-2"></i>
+            Site URL</label
+          >
+          <input
+            autocomplete="off"
+            id="URLInput"
+            type="text"
+            class="form-control mb-3"
+            placeholder="Website URL"
+          />
+          <button
+            class="btn btn-danger text-center my-2 px-5"
+            type="button"
+            id="btnSubmit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <table class="table mt-4 text-center table-dark table-striped">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <div id="overlay"  class="d-none">
+      <div
+        id="model"
+        class="model position-absolute top-50 start-50 translate-middle bg-white p-4 rounded-3 d-none"
+      >
+        <div
+          class="header mb-4 d-flex justify-content-between align-items-center"
+        >
+          <div class="d-flex align-items-center">
+            <span class="me-2"></span>
+            <span class="me-2"></span>
+            <span class="me-2"></span>
+          </div>
+          <div onclick="closeModel()" id="closebtn">x</div>
+        </div>
+        <div class="modelContentForValidation d-none" id="modelContentForValidation">
+          <h5 class="mb-4">
+            Site Name or Url is not valid, Please follow the rules below :
+          </h5>
+          <p class="d-flex align-items-center">
+            <i class="fa-regular fa-circle-right p-2 ps-0"></i> Site name must
+            contain at least 3 characters
+          </p>
+          <p class="d-flex align-items-center">
+            <i class="fa-regular fa-circle-right p-2 ps-0"></i> Site URL must be
+            a valid one
+          </p>
+        </div>
+
+        <div class="modelCotentForSameName d-none" id="modelCotentForSameName">
+          <h4 class="d-flex align-items-center mb-0">
+            <i class="fa-regular fa-circle-right p-2 ps-0"></i>The Site Name Is
+            Already Exist
+          </h4>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
